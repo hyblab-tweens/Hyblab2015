@@ -61,6 +61,22 @@ $(document).ready(function() {
 			
 			if(index == '3')
 			{
+				/*$.ajax({
+					url: "/data.php",
+					type: "post",
+					dataType: "html",
+					data: { sexe: "homme", age: "50"},
+					success: function(data)
+					{
+						alert(data);
+					},
+					error: function(data)
+					{
+						alert(data);
+					}
+				});*/
+				
+				
 				$(".bus").bus_animation($("#slide5").width());
 				
 				img_age = 'img/stats/tranche_age/' + sexe + '-age' + (slider.getCurrentSlide() + 1) + '.png';
@@ -144,8 +160,20 @@ $(document).ready(function() {
 			}
 		}
 	});
+	
 			
-	$('.bouton_valider').click(function() {
+	$('#sex_choisi').click(function() {
+		valider = true;
+		$('#sex_id');
+		$('.main').moveDown();
+	});
+
+	$('#age_choisi').click(function() {
+		valider = true;
+		$('.main').moveDown();
+	});
+	
+	$('#ecart_choisi').click(function() {
 		valider = true;
 		$('.main').moveDown();
 	});
